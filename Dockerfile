@@ -17,6 +17,9 @@ RUN mkdir -p /var/lib/dav \
 RUN mkdir -p /run/apache2
 
 ADD dav.conf /etc/apache2/conf.d/
+ADD dav.auth.conf /etc/apache2/conf.disabled/
+ADD dav.noauth.conf /etc/apache2/conf.disabled/
+
 ADD run.sh /
 RUN chmod 750 /run.sh
 
