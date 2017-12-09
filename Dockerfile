@@ -1,5 +1,4 @@
 FROM alpine:3.4
-MAINTAINER docker@pluza.com
 
 # When running this container, map host's content subdir to /var/webdav
 # Eg.: docker run <...> -v /path/to/content:/var/webdav
