@@ -3,8 +3,6 @@ FROM alpine:3.6@sha256:42c18571af45ffc440bd5127de9ad604f1683e4799dbf7bf588aaee8f
 # When running this container, map host's content subdir to /var/webdav
 # Eg.: docker run <...> -v /path/to/content:/var/webdav
 
-# This container includes a sample video (la.mp4) in /var/webdav/ for k8s demo deployment.
-
 # -v : Verbose
 # apache2-utils: Needed for htpasswd program.
 RUN apk -v --no-cache add \
@@ -21,7 +19,6 @@ RUN mkdir -p /run/apache2
 RUN mkdir -p /var/webdav
 
 ADD no_auth/dav.conf /etc/apache2/conf.d/
-ADD la.mp4 /var/webdav/
 ADD no_auth/run.sh /
 RUN chmod 750 /run.sh
 
