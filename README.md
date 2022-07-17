@@ -3,6 +3,12 @@ Webdav server running in Alpine Linux container
 
 See docker-compose.yml for options you can use to run this image.
 
+# Run with podman
+
+```
+podman run -it -e USERNAME=user -e PASSWORD=pass --rm -p 8000:80 -v $PWD:/var/webdav:z docker.io/rubenbe/alpine-webdav
+```
+
 ## Image size comparison
 
 1/10th the size of ubuntu + apache2:
