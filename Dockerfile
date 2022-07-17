@@ -1,4 +1,4 @@
-FROM alpine:3.9.3
+FROM alpine:3.16
 
 # When running this container, map host's content subdir to /var/webdav
 # Eg.: docker run <...> -v /path/to/content:/var/webdav
